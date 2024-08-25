@@ -39,7 +39,7 @@ app.post('/submit', (req, res) => {
     .catch(err => res.status(400).json({ success: false, error: err }));
 });
 
-app.get('/', (req, res) => {
+app.get('/',(req, res) => {
   res.send({
 
     activeStatus:true,
