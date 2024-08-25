@@ -1,0 +1,33 @@
+@media screen and (max-width: 1225px) {
+    .hero-parent66 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .hero-parent66 {
+      padding-top: var(--padding-8xl);
+      padding-bottom: var(--padding-8xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .car-game66 {
+      font-size: var(--font-size-lg);
+    }
+    .portfolio-links66 {
+      flex-wrap: wrap;
+    }
+    .personal-portfolio66 {
+      font-size: var(--font-size-lg);
+    }
+    .frame-parent66 {
+      flex-wrap: wrap;
+    }
+    .calculator66 {
+      font-size: var(--font-size-lg);
+    }
+    .calculator-links66 {
+      flex-wrap: wrap;
+    }
+  }

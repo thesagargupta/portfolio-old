@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Sagar Gupta - Personal Portfolio Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      async function handleSubmit(event) {
+          event.preventDefault();
+          
+          const form = document.getElementById('myForm');
+          const formData = new FormData(form);
+          const data = {
+              name: formData.get('name'),
+              email: formData.get('email'),
+              phone: formData.get('phone'),
+              message:formData.get('message')
+          };
+
+          try {
+              const response = await fetch('http://localhost:5000/submit', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify(data)
+              });
+
+              const result = await response.json();
+              if (result.success) {
+                Swal.fire({
+                  title: "Thanks for contacting me.",
+                  text: "Your message has been sent successfully!!",
+                  icon: "success"
+                });
+              } else {
+                Swal.fire({
+                  icon: "error",
+                  title: "Oops...",
+                  text: "Something went wrong!"
+                });
+              }
+          } catch (error) {
+              console.error('Error:', error);
+              Swal.fire({
+                title: "Server error",
+                text: "Try after some time",
+                icon: "question"
+              });
+          }
+      }
+  </script>
+
+    <link rel="shortcut icon" type="x-icon" href="Black White Elegant Monogram Initial Name Logo.jpg">
+    
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+   
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Stalinist One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Suez One:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@600&display=swap"
+    />
+    
+  </head>
+  <body>
+
+    <header class="main">
+      <div class="main-child"></div>
+      <div class="rectangle-parent">
+        <div class="frame-child"></div>
+
+        <div class="sagar">SAGAR</div>
+      </div>
+      
+
+      <nav class="navigation">
+        <nav class="nav-items">
+          <a href="#home" class="home">HOME</a>
+          <a href="#about" class="about">ABOUT</a>
+          <a href="#projects" class="projects">PROJECTS</a>
+          <a href="#contact" class="contact">CONTACT</a>
+        </nav>
+      </nav>
+    </header>
+    
+
+    <div class="desktop-1">
+      <link rel="stylesheet" href="media-og.css" />
+  
+      <section id="home">
+      <main class="hero">
+        <div class="hero1"></div>
+        <div class="hero-content">
+          <div class="hero-title-wrapper-parent">
+            <div class="hero-title-wrapper">
+              <div class="hero-subtitle-wrapper-wrapper">
+                <div class="hero-subtitle-wrapper">
+                  <div class="slogan">
+                    <div class="slogan-part">
+                      <div class="i">I’</div>
+                      <div class="m">m</div>
+                    </div>
+                  </div>
+                  <div class="name">
+                    <div class="sagar1">Sagar</div>
+                    <div class="gupta">Gupta</div>
+                  </div>
+                </div>
+              </div>
+              <div class="this-is-my-container">
+                <p class="this-is-my">
+                  This is my official portfolio website that will show
+                </p>
+                <p class="my-details-and">My Details and Work Experiences.</p>
+              </div>
+            </div>
+            <button class="rectangle-group">
+              <div class="frame-item"></div>
+              <div class="download-cv">
+              <a href="Sagar-Gupta CV.pdf">DOWNLOAD CV</a>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="profile-picture" >
+          <div class="profile-picture-child"></div>
+          <img
+            class="profile-1-icon"
+            loading="lazy"
+            alt=""
+            src="profile-1@2x.png"
+          />
+        </div>
+      </main>
+    </section>
+    </div>
+     
+<section id="about">
+    
+  <div class="desktop-6">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="media.css">
+    <div class="rectangle-parent6">
+      <div class="frame-child6"></div>
+      <div class="about-me6">ABOUT ME</div>
+    </div>
+  
+    <div class="html5-logo-for-web-development"></div>
+      <main class="hero-parent6">
+        <div class="hero6"></div>
+        <img
+          class="img-20220416-081234-912-1-icon"
+          loading="lazy"
+          alt=""
+          src="IMG_20220416_081234_912.jpg"
+        />
+
+        <div class="intro-wrapper6">
+
+          <div class="intro6">
+            <div class="hello-im-sagar-gupta-i-am-a-wrapper6">
+              <div class="hello-im-sagar-container6">
+                <p class="hello-im-sagar6">
+                  Hello, I’m Sagar Gupta. I am a Web Developer, Programmer,
+                  Graphic Designer and Data Analyst.
+                </p>
+
+                <p class="i-am-seeking6">
+                  I am seeking to show my creativity in the development field
+                  like Software Development, Web Development. and also
+                  interested in Machine Learning.
+                </p>
+
+                <p class="blank-line6">&nbsp;</p>
+                <p class="p6"></p>
+                <p class="blank-line1">&nbsp;</p>
+              </div>
+            </div>
+
+            <div class="frame-parent6">
+              <div class="education-bachelor-in-computer-wrapper6">
+                <div class="education-bachelor-in-container6">
+                  <p class="education6">Education</p>
+                  <p class="bachelor-in-computer6">
+                    Bachelor of Computer Applications (B.C.A)[2022-25]
+                  </p>
+
+                  <p class="expertise6">Subject of Expertise</p>
+                  <p class="interested-in6">
+                    C/C++, Java, Python and Web Development
+                  </p>
+                </div>
+              </div>
+
+              <div class="frame-group6">
+                <div class="frame-wrapper6">
+                  <div class="frame-container6">
+                    <div class="skills-wrapper6">
+
+
+                      <div class="skills6">Skills</div>
+                    </div>
+                    <div class="ansic-709x423-1-parent">
+                      <img
+                        class="ansic-709x423-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="ansic-709x423.png"
+                      />
+
+                      <div class="css3-1-wrapper">
+                        <img
+                          class="css3-1-icon"
+                          loading="lazy"
+                          alt=""
+                          src="css3.png"
+                        />
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                        <div class="logos-row-one">
+                          <div class="c-brandlogonet-1-parent">
+                            <img
+                              class="c-brandlogonet-1-icon"
+                              loading="lazy"
+                              alt=""
+                              src="c-brandlogo.net_.png"
+                            />
+
+                            <img
+                      class="javascript-logo-2048x1280-1-icon"
+                      loading="lazy"
+                      alt=""
+                      src="JavaScript-Logo-2048x1280.png"
+                    />
+
+                          </div>
+                        </div>
+
+                        <div class="frame-div6">
+                          <div class="r-1-parent">
+                            <img
+                              class="r-1-icon"
+                              loading="lazy"
+                              alt=""
+                              src="R.png"
+                            />
+
+                            <div class="java-logo-transparent-png-768x-wrapper">
+                              <img
+                                class="java-logo-transparent-png-768x-icon"
+                                loading="lazy"
+                                alt=""
+                                src="java-logo-transparent-png-768x768.png"
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                       <div class="logos-row-one1">
+                  <div class="blog-html5-logo-1-wrapper">
+                    <img
+                      class="blog-html5-logo-1-icon"
+                      loading="lazy"
+                      alt=""
+                      src="blog-html5-logo.png"
+                    />
+                  </div>
+
+                  <img
+                    class="mysql-png23-1-icon"
+                    loading="lazy"
+                    alt=""
+                    src="mysql_PNG23.png"
+                  />
+                       </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+               </main>
+        </div>
+  </section>  
+
+  <section id="projects">
+
+      <div class="desktop66">
+<link rel="stylesheet" href="project.css">
+<link rel="stylesheet" href="media-two.css">
+
+        <div class="rectangle-parent66">
+          <div class="frame-child66"></div>
+          <a class="projects66">PROJECTS</a>
+        </div>
+
+        <main class="hero-parent66">
+          <div class="hero66"></div>
+          <div class="car-game-links66">
+            <div class="car-game-links-child66"></div>
+            <div class="link-titles66">
+              <h3 class="car-game66">CAR GAME</h3>
+            </div>
+
+            <img
+            class="image-1-icon"
+            loading="lazy"
+            alt=""
+            src="Screenshot 2024-08-09 190012.png"
+          />
+
+          
+          <div class="game-description66">
+            <div class="game-links66">
+              <div class="i-have-created66">
+                I have created this car game with the help of HTML, CSS, and
+                JavaScript. play this game in your PC or Laptop
+              </div>
+            </div>
+
+            <div class="portfolio-links66">
+              <div class="portfolio-preview66">
+                <button type="button" onclick="location.href=' https://thesagargupta.github.io/Car-Game-Js/'" class="rectangle-group66">
+                  <div class="frame-item66"></div>
+                  <div class="preview66">PREVIEW</div>
+                </button>
+              </div>
+
+
+              <button type="button" onclick="location.href='https://github.com/thesagargupta/Car-Game-Js.git'" class="rectangle-container66">
+                <div class="frame-inner66"></div>
+                <div class="source-code66">&lt;SOURCE CODE&gt;</div>
+              </button>
+
+            </div>
+          </div>
+          </div>
+
+          <div class="car-game-links166">
+            <div class="car-game-links-item66"></div>
+            <div class="personal-portfolio-wrapper66">
+              <h3 class="personal-portfolio66">PERSONAL PORTFOLIO</h3>
+            </div>
+
+            <div class="black-white-elegant-monogram-i-parent">
+              <img
+                class="black-white-elegant-monogram-i"
+                loading="lazy"
+                alt=""
+                src="Black White Elegant Monogram Initial Name Logo.jpg"
+              />
+
+
+              <div class="portfolio-description66">
+                <div class="i-have-created166">
+                  I have created my personal portfolio website, which will so you
+                  my details and experience. which is connected with a database.
+                </div>
+              </div>
+            </div>
+
+            <div class="frame-parent66">
+              <button class="group-button66">
+                <div class="rectangle-div66"></div>
+                <div class="preview166">PREVIEW</div>
+              </button>
+
+              <button class="rectangle-parent166">
+                <div class="frame-child166"></div>
+                <div class="source-code166">&lt;SOURCE CODE&gt;</div>
+              </button>
+
+            </div>
+          </div>
+
+          <div class="car-game-links266">
+            <div class="car-game-links-inner66"></div>
+            <div class="calculator-wrapper66">
+              <h3 class="calculator66">CALCULATOR</h3>
+          </div>
+
+          <img
+          class="screenshot-2024-08-09-193227-1"
+          loading="lazy"
+          alt=""
+          src="Screenshot 2024-08-09 193227.png"
+        />
+
+      
+        <div class="frame-div66">
+          <div class="frame-group66">
+            <div class="i-have-created-this-simple-cal-wrapper66">
+              <div class="i-have-created266">
+                I have created this simple Calculator in which user can
+                perform all types of arithmetic operation. it’s design exactly
+                look like real Calculator.
+              </div>
+            </div>
+
+            <div class="calculator-links66">
+              <button type="button" onclick="location.href='https://thesagargupta.github.io/Calculator/'" class="rectangle-parent266">
+                <div class="frame-child266"></div>
+                <div class="preview266">PREVIEW</div>
+              </button>
+              <button type="button" onclick="location.href='https://github.com/thesagargupta/Calculator.git'" class="rectangle-parent366">
+                <div class="frame-child366"></div>
+                <div class="source-code266">&lt;SOURCE CODE&gt;</div>
+              </button>
+
+            </div>
+          </div>
+        </div>
+        </div>
+        </main>
+      </div>
+  </section>
+
+  <section id="contact">
+
+<div class="desktop-f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+<div class="header-rectangle-c">
+<div class="frame-rect"></div>
+<div class="contact-head">CONTACT</div>
+</div>
+
+<div class="hero-rect">
+
+  <div class="my-form">
+  <div class="my-forms-wrap">
+    <form id="myForm" onsubmit="handleSubmit(event)">
+        <h2 class="my-form-title"><u>Send Your Message Here</u></h2>
+        <div class="my-form-fields">
+            <div class="my-form-group">
+              
+                <input type="text" class="fname" name="name" placeholder="Enter Your Name">
+            </div>
+          
+            <div class="my-form-group">
+              
+                <input type="email" class="email" name="email" placeholder="Enter Your Mail">
+            </div>
+
+            <div class="my-form-group">
+              
+                <input type="tel" class="phone" name="phone" placeholder="Enter Your Phone">
+            </div>
+
+            <div class="my-form-group">
+
+                <textarea name="message" id="msg" name="message" placeholder="Write your message"></textarea>
+            </div>
+        </div>
+        <input  type="submit" value="Send Message" class="submit-button">
+        
+    </form>
+</div>
+</div>
+
+</div>
+
+
+
+
+<div id="overlay" class="overlay"></div>
+<div id="popup" class="popup"></div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-child"></div>
+  <div class="copyright">
+    <h2 class="sagar-gupta">SAGAR GUPTA</h2>
+    <div class="copyright-icon">
+      <div class="all-rights-reserved">© 2024 All rights reserved.</div>
+    </div>
+  </div>
+  <div class="social-icons">
+    <div class="social-links">
+      <a href="https://github.com/thesagargupta">
+      <img
+        class="icons8-github-100-1"
+        loading="lazy"
+        alt=""
+        src="icons8-github-100.png"
+      />
+    </a>
+      <div class="linked-in-icon">
+        <a href="https://www.linkedin.com/in/sagar-gupta-1b107a315/">
+        <img
+          class="linkedin-logo-png-1853-1-icon"
+          loading="lazy"
+          alt=""
+          src="linkedin-logo-png-1853.png"
+        />
+      </a>
+      </div>
+      <a href="https://www.facebook.com/sagargupta.offi/">
+      <img
+        class="pngegg-12x-1-icon"
+        loading="lazy"
+        alt=""
+        src="pngegg-1@2x.png"
+      />
+    </a>
+    <a href="https://www.instagram.com/sagargupta.official/">
+      <div class="app-icon">
+        <img
+          class="pngegg-2-1"
+          loading="lazy"
+          alt=""
+          src="pngegg-2@2x.png"
+        />
+      </a>
+      </div>
+      <a href="https://x.com/offisagargupta">
+      <div class="twitter-icon">
+        <img
+          class="twitter-x-logo-42554-1-icon"
+          loading="lazy"
+          alt=""
+          src="twitter-x-logo-42554.png"
+        />
+      </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </body>
+</html>

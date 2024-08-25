@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-montserrat-alternates: "Montserrat Alternates";
+    --font-montserrat: Montserrat;
+    --font-suez-one: "Suez One";
+    --font-stalinist-one: "Stalinist One";
+  
+    /* font sizes */
+    --font-size-6xl: 25px;
+    --font-size-48xl-9: 59.9px;
+    --font-size-22xl: 41px;
+    --font-size-35xl: 54px;
+    --font-size-5xl: 24px;
+    --font-size-11xl: 20px;
+    --font-size-lg: 18px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-black: #000;
+    --color-darkgray: #9b9898;
+    --color-silver: rgba(190, 188, 188, 0.67);
+    --color-gray-100: #1f1818;
+    --color-gray-200: #0b0b0b;
+    --color-gainsboro: #d9d9d9;
+  
+    /* Gaps */
+    --gap-xl: 0px;
+  
+    /* Paddings */
+    --padding-8xl: 27px;
+    --padding-95xl: 230px;
+    --padding-81xl: 48px;
+    --padding-xl: 20px;
+    --padding-12xl: 31px;
+    --padding-10xl: 0px;
+    --padding-smi: 11px;
+  
+    /* Border radiuses */
+    --br-5xl: 24px;
+
+}
+
