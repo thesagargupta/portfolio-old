@@ -42,6 +42,12 @@ app.post('/submit', (req, res) => {
     .catch(err => res.status(400).json({ success: false, error: err }));
 });
 
+app.get('/',(req,res)=>{
+  res.send({
+      activeStatus:true,
+      error:false,
+  })
+})
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
