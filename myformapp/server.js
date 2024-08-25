@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({}));
 
-const allowedOrigins = ['http://localhost:3000', 'https://sagarguptaportfolio.netlify.app/']; // Add your frontend domains here
+const allowedOrigins = ['http://localhost:3000', 'https://sagarguptaportfolio.netlify.app/submit']; // Add your frontend domains here
 
 // MongoDB Atlas connection string
 const MONGO_URI = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
