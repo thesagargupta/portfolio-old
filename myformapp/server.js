@@ -8,14 +8,15 @@ const PORT = 5000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors({
-  origin: ["https://sagarguptaportfolio.netlify.app/"]
-}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({}));
+
+const allowedOrigins = ['http://localhost:3000', 'https://sagarguptaportfolio.netlify.app/']; // Add your frontend domains here
 
 // MongoDB Atlas connection string
-const uri = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
+const MONGO_URI = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
 
-mongoose.connect(uri)
+mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('MongoDB connection error:', err));
 
