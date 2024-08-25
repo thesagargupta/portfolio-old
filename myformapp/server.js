@@ -8,7 +8,9 @@ const PORT = 5000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: ["https://sagarguptaportfolio.netlify.app/"]
+}));
 
 // MongoDB Atlas connection string
 const uri = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
