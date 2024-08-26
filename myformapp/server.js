@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -38,7 +39,10 @@ app.post('/submit', (req, res) => {
 
   newData.save()
     .then(() => res.status(200).json({ success: true }))
-    .catch(err => res.status(400).json({ success: false, error: err }));
+    .catch(err => {
+      console.error('Error saving data:', err); // Log detailed error
+      res.status(400).json({ success: false, error: err.message });
+    });
 });
 
 app.get('/', (req, res) => {
