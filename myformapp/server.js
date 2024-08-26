@@ -9,7 +9,6 @@ const PORT = 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-const cors = require('cors');
 app.use(cors({
   origin: 'https://sagarguptaportfolio.netlify.app'  // Update with your frontend URL
 }));
