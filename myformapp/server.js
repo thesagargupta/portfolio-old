@@ -1,4 +1,3 @@
-// server.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -12,13 +11,14 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000' // Set to your frontend URL
+  origin: process.env.CLIENT_URL || 'http://localhost:8000' // Set to your frontend URL
 }));
 
 // MongoDB Atlas connection string
 const MONGO_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+// Connect to MongoDB
+mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('Error connecting to MongoDB:', err));
 
@@ -42,6 +42,12 @@ app.post('/submit', (req, res) => {
     .catch(err => res.status(400).json({ success: false, error: err }));
 });
 
+app.get('/', (req, res) => {
+  res.send({
+    activeStatus: true,
+    error: false,
+  });
+});
 
 // Export for Vercel
 module.exports = app;
