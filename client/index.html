@@ -7,54 +7,10 @@
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="config.js"></script>
-    <script>
+    <script src="scripts.js"></script>
 
-      async function handleSubmit(event) {
-          event.preventDefault();
-          
-          const form = document.getElementById('myForm');
-          const formData = new FormData(form);
-          const data = {
-              name: formData.get('name'),
-              email: formData.get('email'),
-              phone: formData.get('phone'),
-              message:formData.get('message')
-          };
 
-          try {
-              const response = await fetch(window.config.API_URL + '/submit' ,  {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json'
-                  },
-                  body: JSON.stringify(data)
-              });
-
-              const result = await response.json();
-              if (result.success) {
-                Swal.fire({
-                  title: "Thanks for contacting me.",
-                  text: "Your message has been sent successfully!!",
-                  icon: "success"
-                });
-              } else {
-                Swal.fire({
-                  icon: "error",
-                  title: "Oops...",
-                  text: "Something went wrong!"
-                });
-              }
-          } catch (error) {
-              console.error('Error:', error);
-              Swal.fire({
-                title: "Server error",
-                text: "Try after some time",
-                icon: "question"
-              });
-          }
-      }
-  </script>
-
+    
     <link rel="shortcut icon" type="x-icon" href="Black White Elegant Monogram Initial Name Logo.jpg">
     
     <link rel="stylesheet" href="./global.css" />

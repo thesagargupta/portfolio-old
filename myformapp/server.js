@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -10,16 +11,15 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'https://sagarguptaportfolio.netlify.app'  // Update with your frontend URL
+  origin: process.env.CLIENT_URL || 'http://localhost:8000' // Set to your frontend URL
 }));
 
-
 // MongoDB Atlas connection string
-const MONGO_URI = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
+const MONGO_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGO_URI)
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('MongoDB connection error:', err));
+  .catch(err => console.log('Error connecting to MongoDB:', err));
 
 // Define schema
 const Schema = mongoose.Schema;
@@ -29,26 +29,30 @@ const DataSchema = new Schema({
   phone: String,
   message: String,
 });
-
-// Create model for 'table' collection in the specified database
 const DataModel = mongoose.model('table', DataSchema, 'table');
 
 // API endpoint to handle form submission
 app.post('/submit', (req, res) => {
   const { name, email, phone, message } = req.body;
-  const newData = new DataModel({ name, email, phone, message});
+  const newData = new DataModel({ name, email, phone, message });
 
   newData.save()
     .then(() => res.status(200).json({ success: true }))
     .catch(err => res.status(400).json({ success: false, error: err }));
 });
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
   res.send({
-      activeStatus:true,
-      error:false,
-  })
-})
+    activeStatus: true,
+    error: false,
+  });
+});
 
+// Export for Vercel
+module.exports = app;
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+if (require.main === module) {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
