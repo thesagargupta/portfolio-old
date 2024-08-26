@@ -34,7 +34,7 @@ async function handleSubmit(event) {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Something went wrong!"
+                text: result.error || "Something went wrong!" // Show detailed error if available
             });
         }
     } catch (error) {
