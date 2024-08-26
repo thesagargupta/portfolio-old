@@ -1,17 +1,20 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+import cors from 'cors'
 
 const app = express();
 const PORT = 5000;
 
 // Middleware
+const apiUrl = process.env.REACT_APP_API_URL || 'https://portfolio-steel-eight-69.vercel.app';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({}));
 
-const allowedOrigins = ['https://sagarguptaportfolio.netlify.app']; // Add your frontend domains here
+
+app.use(cors({
+    origin: 'https://sagarguptaportfolio.netlify.app', 
+}));
 
 // MongoDB Atlas connection string
 const MONGO_URI = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
