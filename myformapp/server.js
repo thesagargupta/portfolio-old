@@ -1,5 +1,5 @@
+// server.js
 require('dotenv').config();
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:8000' // Set to your frontend URL
+  origin: process.env.CLIENT_URL || 'http://localhost:3000' // Set to your frontend URL
 }));
 
 // MongoDB Atlas connection string
@@ -39,10 +39,7 @@ app.post('/submit', (req, res) => {
 
   newData.save()
     .then(() => res.status(200).json({ success: true }))
-    .catch(err => {
-      console.error('Error saving data:', err); // Log detailed error
-      res.status(400).json({ success: false, error: err.message });
-    });
+    .catch(err => res.status(400).json({ success: false, error: err }));
 });
 
 app.get('/', (req, res) => {
