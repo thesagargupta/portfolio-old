@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('myForm').addEventListener('submit', handleSubmit);
 });
@@ -34,7 +35,7 @@ async function handleSubmit(event) {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: result.error || "Something went wrong!" // Show detailed error if available
+                text: "Something went wrong!"
             });
         }
     } catch (error) {
