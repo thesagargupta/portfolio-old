@@ -2,6 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const cors = require('cors');
+app.use(cors({
+  origin: 'https://sagarguptaportfolio.netlify.app'  // Update with your frontend URL
+}));
+
+
 
 const app = express();
 const PORT = 5000;
@@ -9,9 +15,8 @@ const PORT = 5000;
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors({}));
 
-const allowedOrigins = ['https://sagarguptaportfolio.netlify.app']; // Add your frontend domains here
+
 
 // MongoDB Atlas connection string
 const MONGO_URI = 'mongodb+srv://sagarkshn8:Sagar123@cluster0.bw0dr.mongodb.net/form';
