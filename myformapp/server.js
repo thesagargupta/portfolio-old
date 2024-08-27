@@ -10,17 +10,19 @@ const port = process.env.PORT || 3000;
 // Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// CORS Configuration
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://sagarguptaportfolio.netlify.app' // Ensure this is correct
+  origin: process.env.CLIENT_URL || 'https://sagarguptaportfolio.netlify.app/' // Ensure this is your Netlify URL in production
 }));
 
 // MongoDB Atlas connection string
 const MONGO_URI = process.env.MONGODB_URI;
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log('Error connecting to MongoDB:', err));
+  .catch(err => console.error('Error connecting to MongoDB:', err));
 
 // Define schema
 const Schema = mongoose.Schema;
@@ -39,7 +41,10 @@ app.post('/submit', (req, res) => {
 
   newData.save()
     .then(() => res.status(200).json({ success: true }))
-    .catch(err => res.status(400).json({ success: false, error: err }));
+    .catch(err => {
+      console.error('Error saving data:', err);
+      res.status(400).json({ success: false, error: err.message });
+    });
 });
 
 // Export for Vercel
