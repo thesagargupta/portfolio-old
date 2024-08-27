@@ -1,3 +1,4 @@
+// script.js
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('myForm').addEventListener('submit', handleSubmit);
 });
@@ -23,10 +24,6 @@ async function handleSubmit(event) {
             body: JSON.stringify(data)
         });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
         const result = await response.json();
         if (result.success) {
             Swal.fire({
@@ -42,7 +39,7 @@ async function handleSubmit(event) {
             });
         }
     } catch (error) {
-        console.error('Error:', error.message);
+        console.error('Error:', error);
         Swal.fire({
             title: "Server error",
             text: "Try after some time",
