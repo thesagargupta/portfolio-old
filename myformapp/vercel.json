@@ -1,27 +1,14 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
-    }
-  ],
-  "env": {
-    "MONGODB_URI": "@mongodb-uri",
-    "CLIENT_URL": "@client-url",
-    "API_URL": "@api-url"
-  },
-  "build": {
-    "env": {
-      "MONGODB_URI": "@mongodb-uri",
-      "CLIENT_URL": "@client-url",
-      "API_URL": "@api-url"
-    }
+    "builds": [
+      {
+        "src": "./server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/server.js"
+      }
+    ]
   }
-}
