@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('myForm').addEventListener('submit', handleSubmit);
 });
