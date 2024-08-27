@@ -11,14 +11,14 @@ const port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5000' // Set to your frontend URL
+  origin: process.env.CLIENT_URL || 'https://sagarguptaportfolio.netlify.app' // Ensure this is correct
 }));
 
 // MongoDB Atlas connection string
 const MONGO_URI = process.env.MONGODB_URI;
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI)
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log('Error connecting to MongoDB:', err));
 
@@ -41,8 +41,6 @@ app.post('/submit', (req, res) => {
     .then(() => res.status(200).json({ success: true }))
     .catch(err => res.status(400).json({ success: false, error: err }));
 });
-
-
 
 // Export for Vercel
 module.exports = app;
