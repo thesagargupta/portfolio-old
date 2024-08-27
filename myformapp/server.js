@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS Configuration
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'https://sagarguptaportfolio.netlify.app/' // Ensure this is your Netlify URL in production
+  origin: process.env.CLIENT_URL || 'https://sagarguptaportfolio.netlify.app' // Ensure this is your Netlify URL in production
 }));
 
 // MongoDB Atlas connection string
