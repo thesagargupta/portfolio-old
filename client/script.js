@@ -23,6 +23,10 @@ async function handleSubmit(event) {
             body: JSON.stringify(data)
         });
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
         const result = await response.json();
         if (result.success) {
             Swal.fire({
@@ -38,7 +42,7 @@ async function handleSubmit(event) {
             });
         }
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error:', error.message);
         Swal.fire({
             title: "Server error",
             text: "Try after some time",

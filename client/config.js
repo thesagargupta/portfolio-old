@@ -1,5 +1,5 @@
 const config = {
-    API_URL: window.env && window.env.API_URL ? window.env.API_URL : 'https://portfolio-nine-gilt-63.vercel.app'
+    API_URL: 'https://portfolio-nine-gilt-63.vercel.app' // Ensure this matches your deployed Vercel URL
 };
 
 window.config = config;
