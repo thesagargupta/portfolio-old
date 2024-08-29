@@ -411,27 +411,28 @@
         <div class="my-form-fields">
             <div class="my-form-group">
               
-                <input type="text" class="fname" name="name" placeholder="Enter Your Name">
+                <input type="text" class="fname" name="name" id="n1" placeholder="Enter Your Name" required>
             </div>
           
             <div class="my-form-group">
               
-                <input type="email" class="email" name="email" placeholder="Enter Your Mail">
+                <input type="email" class="email" name="email" id="n2" placeholder="Enter Your Mail" required>
             </div>
 
             <div class="my-form-group">
               
-                <input type="tel" class="phone" name="phone" placeholder="Enter Your Phone">
+                <input type="tel" class="phone" name="phone" id="n3" placeholder="Enter Your Phone" required>
             </div>
 
             <div class="my-form-group">
 
-                <textarea name="message" id="msg" name="message" placeholder="Write your message"></textarea>
+                <textarea name="message" class="text-message" id="msg" placeholder="Write your message" required></textarea>
             </div>
         </div>
         <input  type="submit" value="Send Message" class="submit-button">
         
     </form>
+    
     <script src="script.js"></script>
 </div>
 </div>
