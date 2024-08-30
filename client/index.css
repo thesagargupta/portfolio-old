@@ -54,7 +54,35 @@ header{
   width: 100vw;
 }
 
+nav li{
+  list-style: none;
+}
 
+.sidebar{
+  position: fixed;
+  right: 0;
+  height: 40%;
+  width: 250px;
+  z-index: 2;
+  background-color: #494848;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 0 18px 20px rgb(0 0 0 / 70%);
+}
+
+.sidebar li{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+#homes{
+  width: 52px;
+}
 
 .main-child {
     height: 167px;
@@ -168,6 +196,14 @@ nav a{
     min-height: 83px;
     padding-right: 100px;
   }
+  .hambuger{
+    display: none;
+    font-size: 28px;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    float: right;
+}
   .main {
       align-self: stretch;
       background-color: var(--color-gray-100);
@@ -1535,6 +1571,12 @@ border-radius: 5px;
   z-index: 1;
 }
 
+.photo{
+  padding-bottom: 15px;
+}
+.menu-btn{
+  display: none;
+}
 .header-rectangle-c {
   align-self: stretch;
   background-color: var(--color-gray);

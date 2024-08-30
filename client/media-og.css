@@ -52,8 +52,29 @@ padding: 5px 77px;
     min-width: 90px;
   }
 .hero{
-  gap: 27px;
+  gap: 50px;
 }
+
+.profile-picture{
+  padding: var(--padding-12xl) 49px var(--padding-12xl) 38px;
+}
+
+}
+
+@media screen and (max-width:900px){
+  #hide{
+    display: none;
+  }
+
+  .navigation {
+    padding: 3px 0px 0px;
+}
+}
+
+@media screen and (max-width: 350px){
+  .menu-btn{
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 950px){
@@ -66,23 +87,99 @@ padding: 5px 77px;
 
 }
 
+@media screen and (max-width: 900px){
 
+  .menu-btn{
+    display: block;
+  }
+
+
+}
 @media screen and (max-width: 850px){
 
 .hero{
   gap: 0px;
   --padding-81xl: 18px;
 
-
 }
+
+
 
 .profile-picture{
   padding: var(--padding-12xl) 88px var(--padding-12xl)27px;
 }
+}
 
+@media screen and (max-width: 450px){
 
+:root{
+  --padding-95xl:0px;
+}
 
+.name{
+  width: 320px;
+}
+.i{
+  font-size: 40px;
+  padding-top: 47px;
+  height: 0px;
+}
+
+.m{
+  font-size: 40px;
+ 
+}
+
+.hero-title-wrapper{
+  gap: 0px;
+}
+
+.hero-content{
+  min-height: 315px;
+}
+
+.this-is-my-container{
+  font-size: 13px;
+  padding-top: 7px;
+}
+
+.sagar1{
+  font-size: 47px;
+  line-height: 57px;
+}
+
+.gupta{
+  font-size: 47px;
+  padding-top: 0px;
 
 }
 
+.sidebar li{
+  margin-bottom: 20px;
+}
 
+.sidebar{
+  width: 100%;
+}
+
+.hero1{
+  max-width: 0px;
+}
+
+.about{
+  min-width: 64px;
+}
+
+#hide{
+  display: none;
+}
+  
+  
+}
+
+
+@media screen and (max-width: 370px){
+  .menu-btn{
+    padding-left: 25px;
+  }
+}
