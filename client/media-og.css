@@ -125,6 +125,11 @@ padding: 5px 77px;
   --padding-95xl:0px;
 }
 
+.sagar1{
+
+  width:158px;
+}
+
 .profile-picture{
   padding: var(--padding-12xl) 35px var(--padding-12xl)27px;
 }
@@ -177,7 +182,7 @@ padding: 5px 77px;
 
 .sagar1{
   font-size: 47px;
-  line-height: 57px;
+  line-height: 63px;
 }
 
 .gupta{
@@ -228,7 +233,7 @@ padding: 5px 77px;
 @media screen and (max-width: 400px){
 
   .photo{
-    margin-left: -540px;
+    margin-left: -545px;
   }
 
 }

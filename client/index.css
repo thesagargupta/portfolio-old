@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caudex&family=Kalam:wght@300;700&family=Kanit:wght@500&family=Kaushan+Script&family=Markazi+Text:wght@500&family=Noto+Serif+Vithkuqi&family=Pacifico&display=swap');
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -271,14 +273,17 @@ nav a{
     font-weight: 600;
   }
   .sagar1 {
-    flex: 1;
-    line-height: 70px;
+    
+    line-height: 80px;
     display: inline-block;
     z-index: 1;
-    width: 142px;
+    width: 196px;
   }
   .gupta {
     z-index: 1;
+    color:rgb(255, 208, 0);
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
     
   }
   .hero-subtitle-wrapper,
@@ -335,7 +340,7 @@ nav a{
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 0px;
     max-width: 100%;
   }
   .frame-item {
@@ -442,7 +447,7 @@ nav a{
   }
   .hero {
       align-self: stretch;
-      background-color: var(--color-darkgray);
+      background-color: violet;
       align-items: flex-end;
       padding: 99px 0px 0px var(--padding-81xl);
       gap: 88px;
@@ -904,7 +909,7 @@ nav a{
 }
 .hero-parent6 {
   align-self: stretch;
-  background-color: var(--color-darkgray);
+  background-color: violet;
   flex-direction: row;
   padding: 26px 225px var(--padding-5xl) 110px;
   box-sizing: border-box;
@@ -915,7 +920,7 @@ nav a{
 .desktop-6 {
   width: 100%;
   position: relative;
-  background-color: var(--color-white);
+  background-color: violet;
   overflow: hidden;
   flex-direction: column;
   line-height: normal;
@@ -1528,7 +1533,7 @@ border-radius: 5px;
 }
 .hero-parent66 {
   align-self: stretch;
-  background-color: var(--color-darkgray);
+  background-color: violet;
   flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-22xl) 33px;
@@ -1597,7 +1602,7 @@ border-radius: 5px;
   align-self: stretch;
   height: 857px;
   position: relative;
-  background-color: #959595;
+  background-color: violet;
 }
 
 .desktop-f {
