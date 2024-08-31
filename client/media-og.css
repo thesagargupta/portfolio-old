@@ -75,6 +75,15 @@ padding: 5px 77px;
   .menu-btn{
     padding-left: 20px;
   }
+
+  .profile-picture{
+    padding: var(--padding-12xl) 79px var(--padding-12xl)27px;
+  }
+
+  .this-is-my-container{
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (max-width: 950px){
@@ -116,6 +125,10 @@ padding: 5px 77px;
   --padding-95xl:0px;
 }
 
+.profile-picture{
+  padding: var(--padding-12xl) 35px var(--padding-12xl)27px;
+}
+
 .name{
   width: 320px;
 }
@@ -128,6 +141,25 @@ padding: 5px 77px;
 .m{
   font-size: 40px;
  
+}
+.rectangle-parent{
+  min-width: 250px;
+}
+
+.photo{
+  padding-bottom: 300px;
+  margin-left: -517px;
+}
+
+.hero{
+  gap: 0px;
+}
+.name{
+  width: 310px;
+}
+
+.sagar{
+  font-size: 39px;
 }
 
 .hero-title-wrapper{
@@ -180,6 +212,15 @@ padding: 5px 77px;
 
 @media screen and (max-width: 370px){
   .menu-btn{
-    padding-left: 25px;
+    padding-left: 20px;
   }
+
+  .photo{
+    margin-left: -542px;
+  }
+
+  .profile-picture{
+    padding: var(--padding-12xl) 64px var(--padding-12xl)27px;
+  }
+
 }
