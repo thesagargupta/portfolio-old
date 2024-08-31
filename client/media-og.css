@@ -148,7 +148,7 @@ padding: 5px 77px;
 
 .photo{
   padding-bottom: 300px;
-  margin-left: -517px;
+  margin-left: -531px;
 }
 
 .hero{
@@ -221,6 +221,14 @@ padding: 5px 77px;
 
   .profile-picture{
     padding: var(--padding-12xl) 64px var(--padding-12xl)27px;
+  }
+
+}
+
+@media screen and (max-width: 400px){
+
+  .photo{
+    margin-left: -540px;
   }
 
 }
