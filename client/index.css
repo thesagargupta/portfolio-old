@@ -447,7 +447,7 @@ nav a{
   }
   .hero {
       align-self: stretch;
-      background-color: violet;
+      background-color: #8b8b8b;
       align-items: flex-end;
       padding: 99px 0px 0px var(--padding-81xl);
       gap: 88px;
@@ -909,7 +909,7 @@ nav a{
 }
 .hero-parent6 {
   align-self: stretch;
-  background-color: violet;
+  background-color: #8b8b8b;
   flex-direction: row;
   padding: 26px 225px var(--padding-5xl) 110px;
   box-sizing: border-box;
@@ -920,7 +920,7 @@ nav a{
 .desktop-6 {
   width: 100%;
   position: relative;
-  background-color: violet;
+  background-color: #8b8b8b;
   overflow: hidden;
   flex-direction: column;
   line-height: normal;
@@ -1533,7 +1533,7 @@ border-radius: 5px;
 }
 .hero-parent66 {
   align-self: stretch;
-  background-color: violet;
+  background-color: #8b8b8b;
   flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-22xl) 33px;
@@ -1600,7 +1600,7 @@ border-radius: 5px;
   align-self: stretch;
   height: 857px;
   position: relative;
-  background-color: violet;
+  background-color: #8b8b8b;
 }
 
 .desktop-f {
