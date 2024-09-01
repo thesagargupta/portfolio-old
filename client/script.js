@@ -54,6 +54,9 @@ async function handleSubmit(event) {
 
     const data = { name, email, phone, message };
 
+    // Show the loader
+    document.getElementById('loader').style.display = 'flex';
+
     try {
         const response = await fetch(window.config.API_URL + '/submit', {
             method: 'POST',
@@ -85,5 +88,8 @@ async function handleSubmit(event) {
             text: "Try after some time",
             icon: "question"
         });
+    } finally {
+        // Hide the loader
+        document.getElementById('loader').style.display = 'none';
     }
 }
