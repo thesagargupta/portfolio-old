@@ -203,11 +203,11 @@ padding: 5px 77px;
   height: 60px;
 }
 
-#sidebar li{
+.sidebar li{
   margin-bottom: 20px;
 }
 
-#sidebar{
+.sidebar{
   width: 100%;
 }
 
