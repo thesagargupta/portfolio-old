@@ -23,6 +23,15 @@ async function handleSubmit(event) {
         return;
     }
 
+    if (name.length < 5) {
+        Swal.fire({
+            icon: "error",
+            title: "Name Length Error",
+            text: "Name length is too short! It must be at least 5 characters long."
+        });
+        return;
+    }
+
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(email)) {
         Swal.fire({
