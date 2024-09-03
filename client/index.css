@@ -1201,6 +1201,7 @@ border-radius: 5px;
 .rectangle-parent366:hover {
   background-color: var(--color-darkslategray);
   transform: scale(1.1);
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 .portfolio-preview66 {
   flex: 1;
@@ -1949,4 +1950,12 @@ border-radius: 5px;
   }
  
 
+}
+
+.social-icons a {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
 }
