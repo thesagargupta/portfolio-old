@@ -142,7 +142,9 @@ nav li{
     line-height: 72px;
     display: inline-block;
     z-index: 1;
-  }
+    color: black;
+    text-decoration: none;
+}
   .rectangle-parent {
     width: 242px;
     background-color: var(--color-gainsboro);
