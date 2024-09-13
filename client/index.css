@@ -168,7 +168,7 @@ nav li{
   }
   .home {
     text-decoration: none;
-    width: 100px;
+    width: 75px;
     color: inherit;
     flex-shrink: 0;
   }
