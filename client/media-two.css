@@ -30,4 +30,10 @@
     .calculator-links66 {
       flex-wrap: wrap;
     }
+    .personal-ai-wrapper66{
+      font-size: var(--font-size-lg);
+    }
+    .hero-parent66{
+      gap: 66px;
+    }
   }
